@@ -1,0 +1,172 @@
+:root {
+  --color-primary: #f59e0b;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9fafb;
+  --max-width: 720px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 3rem;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-header nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Post */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.post-meta {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content strong {
+  font-weight: 600;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.post-footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Homepage */
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-list h2 a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.post-list h2 a:hover {
+  color: var(--color-primary);
+}
+
+.post-list .excerpt {
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.read-more {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .post-header h1 {
+    font-size: 1.75rem;
+  }
+}

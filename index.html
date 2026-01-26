@@ -1,0 +1,19 @@
+---
+layout: default
+title: OughtaBee Blog
+---
+<div class="blog-intro">
+  <h1>OughtaBee Blog</h1>
+  <p>Insights for course creators on content, marketing, and automation.</p>
+</div>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+    <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+  </li>
+  {% endfor %}
+</ul>

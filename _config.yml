@@ -1,0 +1,38 @@
+# Site Settings
+title: OughtaBee Blog
+description: Insights for course creators on content, marketing, and automation
+url: "https://blog.oughtabee.ai"
+baseurl: ""
+
+# Author
+author:
+  name: Trevor Page
+  email: your-email@example.com
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# SEO Plugin
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Social (for SEO meta tags)
+twitter:
+  username: your_twitter_handle
+social:
+  name: OughtaBee
+  links:
+    - https://www.linkedin.com/company/oughtabee
+    - https://twitter.com/your_handle
+
+# Default front matter for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Trevor Page"
