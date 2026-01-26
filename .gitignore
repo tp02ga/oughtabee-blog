@@ -1,0 +1,50 @@
+# Sensitive files - NEVER commit these
+.env
+.env.*
+*.env
+.env.local
+.env.production
+secrets.yml
+secrets.yaml
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# API keys and tokens
+api_keys.txt
+tokens.txt
+*_secret*
+*_token*
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+Gemfile.lock
+*.gem
+.bundle/
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log
+logs/
+
+# Drafts (if you want to keep unpublished posts private)
+_drafts/
