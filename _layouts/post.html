@@ -3,20 +3,28 @@ layout: default
 ---
 <article class="post">
   <header class="post-header">
-    <h1>{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %d, %Y" }}
+        {{ page.date | date: "%b %d, %Y" }}
       </time>
-      {% if page.author %} • {{ page.author }}{% endif %}
     </p>
+    <h1>{{ page.title }}</h1>
   </header>
 
   <div class="post-content">
     {{ content }}
   </div>
 
-  <footer class="post-footer">
-    <p><strong>Ready to automate your content?</strong> <a href="https://contentbee.ai">Try ContentBee</a></p>
-  </footer>
+  <div class="post-footer-cta">
+    <a href="https://oughtabee.ai" class="cta-card cta-card--primary">
+      <h3>Ready to grow your business?</h3>
+      <p>OughtaBee helps coaches and course creators automate their content and marketing so they can focus on what matters.</p>
+      <span class="cta-button">Learn More</span>
+    </a>
+    <a href="https://contentbee.ai" class="cta-card cta-card--secondary">
+      <h3>Automate your content</h3>
+      <p>ContentBee creates SEO-optimized blog posts, social media content, and email campaigns on autopilot.</p>
+      <span class="cta-button">Try ContentBee Free</span>
+    </a>
+  </div>
 </article>

@@ -9,22 +9,20 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a href="{{ '/' | relative_url }}" class="logo">OughtaBee Blog</a>
-      <nav>
-        <a href="https://oughtabee.ai">Main Site</a>
-      </nav>
-    </div>
+    <a href="{{ '/' | relative_url }}" class="logo">OughtaBee</a>
   </header>
 
-  <main class="container">
+  <main>
     {{ content }}
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ site.time | date: '%Y' }} OughtaBee. All rights reserved.</p>
-    </div>
+    <p>Stay up to date with our latest insights, or <a href="{{ '/feed.xml' | relative_url }}">grab the RSS feed</a>.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="copyright">&copy; {{ site.time | date: '%Y' }} <a href="https://oughtabee.ai">OughtaBee</a></p>
   </footer>
 </body>
 </html>
