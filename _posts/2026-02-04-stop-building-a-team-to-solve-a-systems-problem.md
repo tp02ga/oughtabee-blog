@@ -2,8 +2,9 @@
 title: "Stop Building a Team to Solve a Systems Problem"
 date: 2026-02-04
 author: Trevor Page
-description: "Overwhelmed and thinking about hiring? Before you post that job listing, ask yourself whether you have a people problem or a systems problem."
+description: "Hiring a VA or associate coach won't fix an overwhelm problem if your business lacks systems. Here's how to eliminate and automate first — then hire strategically."
 image: /assets/images/team-vs-systems.jpg
+permalink: /automate-before-hiring/
 ---
 
 You're overwhelmed. Your calendar is a war zone. You're doing a mediocre job at ten things instead of an excellent job at three. Every week, something slips through the cracks.
