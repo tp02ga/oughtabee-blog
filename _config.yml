@@ -36,3 +36,7 @@ defaults:
     values:
       layout: "post"
       author: "Trevor Page"
+
+# Exclude from processing
+exclude:
+  - CLAUDE.md
