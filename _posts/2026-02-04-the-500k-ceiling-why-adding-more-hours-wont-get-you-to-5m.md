@@ -2,8 +2,9 @@
 title: "The $500K Ceiling: Why Adding More Hours Won't Get You to $5M"
 date: 2026-02-04
 author: Trevor Page
-description: "Hit $500K with your coaching business but can't break through? The math says more hours isn't the answer. Here's what is."
+description: "You've maxed out what's possible by trading time for money. Here's how experienced coaches break through the revenue ceiling using leverage — not more hours."
 image: /assets/images/500k-ceiling.jpg
+permalink: /scale-coaching-business-beyond-500k/
 ---
 
 You've done something remarkable. You built a coaching or consulting business that generates half a million dollars (or more) a year. You have a proven offer. People pay premium prices for your time and expertise. You've got a track record of results that speaks for itself.
