@@ -2,8 +2,9 @@
 title: "The Course Creator's Content Dilemma: Teaching vs. Marketing"
 date: 2026-01-26
 author: Trevor Page
-description: "Most course creators feel torn between teaching and marketing. But what if marketing IS teaching, just in a different format?"
+description: "Struggling to market your course without feeling fake? Here's why marketing and teaching are the same skill — and how to use that to grow on LinkedIn."
 image: /assets/images/content-dilemma.jpg
+permalink: /content-marketing-for-course-creators/
 ---
 
 # The Course Creator's Content Dilemma: Teaching vs. Marketing
