@@ -2,8 +2,9 @@
 title: "How to Create a Month of Social Content in One Afternoon"
 date: 2026-01-28
 author: Trevor Page
-description: "Stop scrambling for content daily. Here's a batching system to create a month of social posts in a single focused session."
+description: "Stop the daily content scramble. This 4-hour batching system lets you create 30 days of social media posts in a single focused afternoon."
 image: /assets/images/content-batching.jpg
+permalink: /batch-social-media-content-creation/
 ---
 
 Every day, the same panic.
