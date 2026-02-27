@@ -2,8 +2,9 @@
 title: "Why the Best Coaches Are Getting Outmarketed by the Worst Ones"
 date: 2026-02-04
 author: Trevor Page
-description: "You're better at coaching than 90% of your competitors. But they're getting more leads. Here's why your expertise is making you invisible."
+description: "Less experienced coaches are out-posting you and winning clients that should be yours. Here's the visibility system that lets expert coaches compete without burning out."
 image: /assets/images/outmarketed-coaches.jpg
+permalink: /social-media-marketing-for-coaches/
 ---
 
 There's a coach in your niche who has maybe three years of experience. They've got a decent Canva game, a selfie ring light, and they post on LinkedIn and Instagram every single day. Twice a day sometimes.
