@@ -2,8 +2,9 @@
 title: "Social Listening Without Drowning: A Minimalist Approach"
 date: 2026-01-28
 author: Trevor Page
-description: "Most social listening advice tells you to monitor everything. Here's why that backfires and what to track instead."
+description: "You don't need 50 keyword alerts. You need 5. Here's the minimalist social listening setup that takes 15 minutes a week and actually leads to decisions."
 image: /assets/images/social-listening-minimalist.jpg
+permalink: /social-listening-small-business/
 ---
 
 You've heard you should be doing "social listening."
