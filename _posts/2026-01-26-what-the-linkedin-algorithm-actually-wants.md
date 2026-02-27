@@ -2,8 +2,9 @@
 title: "What the LinkedIn Algorithm Actually Wants in 2026"
 date: 2026-01-26
 author: Trevor Page
-description: "LinkedIn's algorithm changed significantly in 2026. Here's what actually drives reach now - and why course creators have a built-in advantage."
+description: "LinkedIn organic reach is down 50% in 2026. Here's exactly how the algorithm works now - Depth Score, engagement quality, and what content formats win."
 image: /assets/images/linkedin-algorithm-2026.jpg
+permalink: /linkedin-algorithm-2026/
 ---
 
 Your LinkedIn posts are getting fewer views than they did last year.
