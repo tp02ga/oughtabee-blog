@@ -2,8 +2,9 @@
 title: "5 Signs Your Automated DMs Are Hurting Your Brand"
 date: 2026-01-28
 author: Trevor Page
-description: "Automated DMs can save time or destroy trust. Here are the warning signs that yours are doing more harm than good."
+description: "A near-zero response rate, unfollows right after DMs, people screenshotting your messages — here's how to tell if your DM automation is backfiring."
 image: /assets/images/automated-dms-hurting-brand.jpg
+permalink: /automated-dms-hurting-your-brand/
 ---
 
 Someone follows you on Instagram. Within seconds, they get a DM.
