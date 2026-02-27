@@ -2,8 +2,9 @@
 title: "How to Create a Prompt Library That Actually Works"
 date: 2026-01-28
 author: Trevor Page
-description: "Stop starting from scratch every time you use AI. Build a tested prompt library that consistently produces usable content."
+description: "Stop starting from scratch every time you open ChatGPT. Here's how to build a reusable AI prompt library that consistently produces on-brand social content."
 image: /assets/images/prompt-library.jpg
+permalink: /ai-prompt-library/
 ---
 
 Every time you open ChatGPT or whatever AI tool you use, you start from scratch.
