@@ -2,8 +2,9 @@
 title: "How to Audit Your Content Library in 90 Minutes (And Find the Revenue Hiding Inside It)"
 date: 2026-02-04
 author: Trevor Page
-description: "A step-by-step guide for coaches and founders to audit their existing content library and discover untapped revenue opportunities."
+description: "You're sitting on thousands of hours of intellectual property — and most of it is untouched. This 90-minute audit shows you exactly where the value is."
 image: /assets/images/content-library-audit.jpg
+permalink: /content-audit-for-coaches/
 ---
 
 If you've been coaching or consulting for three or more years, you're sitting on a mountain of content. Recorded calls, course modules, workshop decks, written frameworks, email sequences, PDF guides, Loom videos, webinar replays. It's everywhere. Google Drive. Dropbox. Your course platform. Your email marketing tool. Random folders on your desktop.
