@@ -2,25 +2,514 @@
 layout: default
 title: OughtaBee Blog
 ---
-<div class="blog-intro">
-  <h1>OughtaBee Blog</h1>
-  <p class="blog-headline">We help coaches expand their capacity and increase revenues through our AI Clone Brain technology.</p>
-  <p class="blog-subtext">Insights on AI, automation, and scaling your coaching business beyond the hour-for-dollar trap.</p>
-</div>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <div class="author-byline">
-      <img class="author-photo" src="{{ '/trevor.jpeg' | relative_url }}" alt="Trevor" width="36" height="36">
-      <div>
-        <p class="author-name">Trevor</p>
-        <!-- author title/page link can go here later -->
-      </div>
+<style>
+  /* Blog Header - matches homepage */
+  .site-header {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: #ffffff;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+  }
+
+  .header-logo-icon {
+    height: 28px;
+    width: auto;
+  }
+
+  .header-logo-text {
+    font-weight: 600;
+    color: #111827;
+    font-size: 15px;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .header-nav a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .header-nav a:hover {
+    color: #15b8a6;
+  }
+
+  .header-nav .cta-button {
+    background: #15b8a6;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .header-nav .cta-button:hover {
+    background: #0ea593;
+  }
+
+  /* Blog Redesign Styles */
+  .blog-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 24px 60px 16px;
+    background: linear-gradient(135deg, rgba(21, 184, 166, 0.05) 0%, rgba(255, 201, 39, 0.02) 100%);
+    margin-bottom: 24px;
+  }
+
+  .blog-hero-header {
+    width: 100%;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 0;
+  }
+
+  .blog-hero h1 {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #111827;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px 0;
+  }
+
+  .blog-hero-accent {
+    color: #15b8a6;
+  }
+
+  .blog-hero-subline {
+    font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  /* Featured Visual - removed, image now in featured post */
+
+  /* Blog Content Container */
+  .blog-content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  /* Featured Post Highlight */
+  .featured-post {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .featured-post-image {
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .featured-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-post-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .featured-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #15b8a6;
+    margin-bottom: 4px;
+  }
+
+  .featured-post h2 {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #111827;
+    margin: 0 0 10px 0;
+  }
+
+  .featured-post h2 a {
+    color: #111827;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .featured-post h2 a:hover {
+    color: #15b8a6;
+  }
+
+  .featured-post .author-byline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0 8px 0;
+  }
+
+  .featured-post .author-photo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .featured-post .author-name {
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .featured-post .excerpt {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #6b7280;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .featured-post .read-more {
+    color: #15b8a6;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+    font-size: 13px;
+  }
+
+  .featured-post .read-more:hover {
+    gap: 10px;
+  }
+
+  /* Blog Posts Section */
+  .blog-posts-header {
+    margin-bottom: 18px;
+  }
+
+  .blog-posts-header h2 {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #15b8a6;
+    display: inline-block;
+  }
+
+  /* Override post list styles */
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-list li {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .post-list h2 {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .post-list h2 a {
+    color: #111827;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .post-list h2 a:hover {
+    color: #15b8a6;
+  }
+
+  .post-list .author-byline {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0 6px 0;
+  }
+
+  .post-list .author-photo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .post-list .author-name {
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+    font-size: 11px;
+  }
+
+  .post-list .excerpt {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #6b7280;
+    margin: 6px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .read-more {
+    color: #15b8a6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .read-more:hover {
+    color: #0ea593;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .header-container {
+      padding: 0 40px;
+    }
+
+    .blog-hero {
+      padding: 20px 40px 12px;
+      margin-bottom: 20px;
+    }
+
+    .blog-hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .blog-hero-subline {
+      font-size: 15px;
+    }
+
+    .blog-content-wrapper {
+      padding: 0 40px;
+    }
+
+    .featured-post {
+      padding: 14px;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .featured-post-image {
+      flex: 0 0 130px;
+      width: 130px;
+      height: 130px;
+    }
+
+    .featured-post h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .blog-posts-header h2 {
+      font-size: 20px;
+      padding-bottom: 8px;
+    }
+
+    .post-list h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .post-list li {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 0 20px;
+    }
+
+    .site-header nav {
+      gap: 12px;
+    }
+
+    .site-header nav a {
+      font-size: 12px;
+    }
+
+    .blog-hero {
+      padding: 16px 20px 10px;
+      margin-bottom: 16px;
+    }
+
+    .blog-hero h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .blog-hero-subline {
+      font-size: 14px;
+    }
+
+    .blog-content-wrapper {
+      padding: 0 20px;
+    }
+
+    .featured-post {
+      padding: 12px;
+      margin-bottom: 14px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .featured-post-image {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 140px;
+    }
+
+    .featured-post h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .featured-post .excerpt {
+      font-size: 14px;
+    }
+
+    .blog-posts-header h2 {
+      font-size: 18px;
+      padding-bottom: 8px;
+    }
+
+    .post-list li {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+    }
+
+    .post-list h2 {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+  }
+</style>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="https://oughtabee.ai" class="header-logo">
+      <img src="{{ '/public/logo.webp' | relative_url }}" alt="OughtaBee AI" class="header-logo-icon">
+      <span class="header-logo-text">OughtaBee AI</span>
+    </a>
+    <nav class="header-nav">
+      <a href="https://oughtabee.ai#how-it-works">How It Works</a>
+      <a href="https://oughtabee.ai#about">About Us</a>
+      <a href="https://oughtabee.ai/blog">Blog</a>
+      <a href="https://leads.oughtabee.ai/apply" class="cta-button">Apply Now →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="blog-hero-header">
+    <h1>Insights on scaling your <span class="blog-hero-accent">coaching business</span> with AI.</h1>
+    <p class="blog-hero-subline">Learn how to expand your reach, automate your expertise, and break free from the hour-for-dollar trap.</p>
+  </div>
+</section>
+
+<div class="blog-content-wrapper">
+  <div class="featured-post">
+    <div class="featured-post-image">
+      <img src="{{ '/assets/us desktop chat.png' | relative_url }}" alt="Featured Article">
     </div>
-    <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-  </li>
-  {% endfor %}
-</ul>
+    <div class="featured-post-content">
+      <span class="featured-label">Featured</span>
+      {% assign first_post = site.posts.first %}
+      <h2><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></h2>
+      <div class="author-byline">
+        <img class="author-photo" src="{{ '/trevor.jpeg' | relative_url }}" alt="Trevor" width="28" height="28">
+        <div>
+          <p class="author-name">Trevor</p>
+        </div>
+      </div>
+      <p class="excerpt">{{ first_post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <a href="{{ first_post.url | relative_url }}" class="read-more">Read more →</a>
+    </div>
+  </div>
+
+  <div class="blog-posts-header">
+    <h2>Latest Articles</h2>
+  </div>
+
+  <ul class="post-list">
+    {% for post in site.posts offset:1 %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="author-byline">
+        <img class="author-photo" src="{{ '/trevor.jpeg' | relative_url }}" alt="Trevor" width="24" height="24">
+        <div>
+          <p class="author-name">Trevor</p>
+        </div>
+      </div>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
