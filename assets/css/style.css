@@ -34,51 +34,77 @@ body {
 
 /* Header – matches main site (oughtabee.ai) */
 .site-header {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--color-border-light);
-  margin-bottom: 0;
-  background: #ffffff;
-}
-
-.site-header .container {
+  padding: 12px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(243, 245, 249, 0.85);
 }
 
-.site-logo {
+.header-logo {
   display: flex;
   align-items: center;
+  gap: 8px;
   text-decoration: none;
 }
 
-.site-logo-img {
-  display: block;
-  height: 32px;
-  width: auto;
+.header-logo-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
-.logo {
-  font-family: var(--font-serif);
-  font-weight: bold;
-  font-size: 22px;
-  color: var(--color-heading);
-  text-decoration: none;
+.header-logo-text {
+  font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
 }
 
-.logo span {
-  color: var(--color-red);
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-.site-header nav a {
+.header-nav a {
+  font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--color-text-light);
   text-decoration: none;
-  font-size: 13px;
-  margin-left: 20px;
+  transition: color 0.2s;
 }
 
-.site-header nav a:hover {
-  color: var(--color-red);
+.header-nav a:hover {
+  color: #111827;
+}
+
+.header-nav a.btn-primary {
+  background: #15b8a6;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.header-nav a.btn-primary:hover {
+  background: #0ea593;
+  color: #fff;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111827;
+  padding: 4px;
 }
 
 /* Post */
@@ -246,6 +272,34 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 16px 24px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 24px;
+    gap: 16px;
+    border-bottom: 1px solid var(--color-border-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 16px;

@@ -19,19 +19,20 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFTSR72P"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header class="site-header" style="padding: 12px 0; border-bottom: 1px solid #e8e8e8; background: #ffffff;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 60px; display: flex; justify-content: space-between; align-items: center;">
-      <a href="https://oughtabee.ai" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
-        <img src="{{ '/favicon.png' | relative_url }}" alt="OughtaBee AI" style="height: 28px; width: auto;">
-        <span style="font-weight: 600; color: #111827; font-size: 15px;">OughtaBee AI</span>
-      </a>
-      <nav style="display: flex; gap: 32px; align-items: center;">
-        <a href="https://oughtabee.ai#how-it-works" style="color: #666666; text-decoration: none; font-size: 14px;">How It Works</a>
-        <a href="https://oughtabee.ai#about" style="color: #666666; text-decoration: none; font-size: 14px;">About Us</a>
-        <a href="{{ '/' | relative_url }}" style="color: #666666; text-decoration: none; font-size: 14px;">Blog</a>
-        <a href="https://leads.oughtabee.ai/apply" style="background: #15b8a6; color: white; padding: 8px 20px; border-radius: 20px; font-weight: 500; text-decoration: none; font-size: 14px;">Apply Now →</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a href="https://oughtabee.ai" class="header-logo">
+      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="OughtaBee AI" class="header-logo-icon">
+      <span class="header-logo-text">OughtaBee AI</span>
+    </a>
+    <button class="mobile-toggle" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+    <nav class="header-nav">
+      <a href="https://oughtabee.ai#how-it-works">How It Works</a>
+      <a href="https://oughtabee.ai#about">About Us</a>
+      <a href="{{ '/' | relative_url }}">Blog</a>
+      <a href="https://leads.oughtabee.ai/apply" class="btn-primary">Apply Now <span>&rarr;</span></a>
+    </nav>
   </header>
 
   <main>
@@ -43,5 +44,10 @@
       <p>&copy; {{ site.time | date: '%Y' }} OughtaBee. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    document.querySelector('.mobile-toggle')?.addEventListener('click', function() {
+      document.querySelector('.header-nav').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
