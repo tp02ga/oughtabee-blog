@@ -12,6 +12,9 @@ layout: default
         <!-- link to Trevor's page can go here later -->
       </div>
     </div>
+    {% if page.image %}
+    <img class="post-hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
   </header>
 
   <div class="post-content">

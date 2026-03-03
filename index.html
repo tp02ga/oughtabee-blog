@@ -380,13 +380,15 @@ title: OughtaBee Blog
 </section>
 
 <div class="blog-content-wrapper">
+  {% assign first_post = site.posts.first %}
   <div class="featured-post">
+    {% if first_post.image %}
     <div class="featured-post-image">
-      <img src="{{ '/assets/prospect-chat.png' | relative_url }}" alt="Featured Article">
+      <img src="{{ first_post.image | relative_url }}" alt="{{ first_post.title }}">
     </div>
+    {% endif %}
     <div class="featured-post-content">
       <span class="featured-label">Featured</span>
-      {% assign first_post = site.posts.first %}
       <h2><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></h2>
       <div class="author-byline">
         <img class="author-photo" src="{{ '/trevor.jpeg' | relative_url }}" alt="Trevor" width="28" height="28">
