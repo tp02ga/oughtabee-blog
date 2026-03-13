@@ -9,7 +9,7 @@
   --color-border-light: #e8e8e8;
   --font-serif: Georgia, 'Times New Roman', serif;
   --font-sans: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --max-width: 720px;
+  --max-width: 800px;
 }
 
 * {
@@ -28,8 +28,9 @@ body {
 
 .container {
   max-width: var(--max-width);
+  width: min(var(--max-width), calc(100% - 3rem));
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
 }
 
 /* Header – matches main site (oughtabee.ai) */
@@ -154,7 +155,8 @@ body {
 }
 
 .post-hero-image {
-  width: 100%;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
   max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
@@ -209,7 +211,8 @@ body {
 }
 
 .post-content table {
-  width: 100%;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
@@ -329,6 +332,29 @@ body {
   text-align: center;
 }
 
+/* Large screens */
+@media (min-width: 1200px) {
+  .post-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .post-content h2 {
+    margin-top: 3rem;
+  }
+
+  .post-hero-image {
+    width: calc(100% + 8rem);
+    margin-left: -4rem;
+    max-height: 460px;
+    border-radius: 10px;
+  }
+
+  .post-content table {
+    width: calc(100% + 8rem);
+    margin-left: -4rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .site-header {
@@ -355,6 +381,12 @@ body {
 
   .mobile-toggle {
     display: block;
+  }
+
+  .post-hero-image,
+  .post-content table {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
