@@ -186,6 +186,55 @@ body {
   font-weight: 600;
 }
 
+.post-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 2.5rem 0;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.post-content th {
+  background: var(--color-bg-alt);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--color-border-light);
+  white-space: nowrap;
+}
+
+.post-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.post-content tr:last-child td {
+  border-bottom: none;
+}
+
 .post-footer {
   margin-top: 3rem;
   padding-top: 2rem;
