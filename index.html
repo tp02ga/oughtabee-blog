@@ -394,16 +394,9 @@ title: OughtaBee Blog
       <div class="author-byline">
         <img class="author-photo" src="{{ feat_author.photo | relative_url }}" alt="{{ feat_author.short_name }}" width="28" height="28">
         <div>
-          <p class="author-name">{{ feat_author.short_name }}</p>
+          <p class="author-name">{{ feat_author.short_name }}{% if first_post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ first_post.categories[0] | slugify }}/" class="category-label">{{ first_post.categories[0] }}</a>{% endif %}</p>
         </div>
       </div>
-      {% if first_post.categories.size > 0 %}
-      <div class="post-categories">
-        {% for cat in first_post.categories %}
-          <a href="/categories/{{ cat | slugify }}/" class="category-badge">{{ cat }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
       <p class="excerpt">{{ first_post.excerpt | strip_html | truncatewords: 50 }}</p>
       <a href="{{ first_post.url | relative_url }}" class="read-more">Read more →</a>
     </div>
@@ -421,16 +414,9 @@ title: OughtaBee Blog
       <div class="author-byline">
         <img class="author-photo" src="{{ post_author.photo | relative_url }}" alt="{{ post_author.short_name }}" width="24" height="24">
         <div>
-          <p class="author-name">{{ post_author.short_name }}</p>
+          <p class="author-name">{{ post_author.short_name }}{% if post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ post.categories[0] | slugify }}/" class="category-label">{{ post.categories[0] }}</a>{% endif %}</p>
         </div>
       </div>
-      {% if post.categories.size > 0 %}
-      <div class="post-categories">
-        {% for cat in post.categories %}
-          <a href="/categories/{{ cat | slugify }}/" class="category-badge">{{ cat }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
       <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
       <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
     </li>

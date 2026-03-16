@@ -250,31 +250,21 @@ a.author-name:hover {
   color: #15b8a6;
 }
 
-/* Category badges */
-.post-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
+/* Category inline labels */
+.category-sep {
+  color: #d1d5db;
+  font-weight: 400;
 }
 
-.category-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  color: #15b8a6;
-  background: rgba(21, 184, 166, 0.08);
-  border: 1px solid rgba(21, 184, 166, 0.2);
-  border-radius: 12px;
-  padding: 2px 10px;
+.category-label {
+  color: #9ca3af;
+  font-weight: 400;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  font-size: inherit;
 }
 
-.category-badge:hover {
-  background: rgba(21, 184, 166, 0.15);
-  color: #0ea593;
+.category-label:hover {
+  color: #6b7280;
 }
 
 /* Category page */

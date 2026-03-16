@@ -10,16 +10,9 @@ layout: default
       <img class="author-photo" src="{{ author.photo | relative_url }}" alt="{{ author.short_name }}" width="40" height="40">
       <div>
         <a href="{{ author.linkedin }}" class="author-name" target="_blank" rel="noopener">{{ author.short_name }}</a>
-        <p class="author-title">{{ author.title }}</p>
+        <p class="author-title">{{ author.title }}{% if page.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ page.categories[0] | slugify }}/" class="category-label">{{ page.categories[0] }}</a>{% endif %}</p>
       </div>
     </div>
-    {% if page.categories.size > 0 %}
-    <div class="post-categories">
-      {% for cat in page.categories %}
-        <a href="/categories/{{ cat | slugify }}/" class="category-badge">{{ cat }}</a>
-      {% endfor %}
-    </div>
-    {% endif %}
     {% if page.image %}
     <img class="post-hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
     {% endif %}
