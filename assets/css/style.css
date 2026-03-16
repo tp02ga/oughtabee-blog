@@ -256,7 +256,8 @@ a.author-name:hover {
   font-weight: 400;
 }
 
-.category-label {
+.category-label,
+.category-label:visited {
   color: #9ca3af;
   font-weight: 400;
   text-decoration: none;
