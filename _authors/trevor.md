@@ -2,7 +2,7 @@
 short_name: trevor
 name: Trevor Page
 title: OughtaBee CEO
-photo: /trevor.jpeg
+photo: /assets/images/trevor.jpeg
 linkedin: https://www.linkedin.com/in/trevor-page-28350921/
 ---
 

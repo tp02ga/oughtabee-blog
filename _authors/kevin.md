@@ -2,7 +2,7 @@
 short_name: kevin
 name: Kevin Gallaccio
 title: OughtaBee Lead Developer
-photo: /assets/images/kevin.jpeg
+photo: /assets/images/kevin.jpg
 linkedin: https://www.linkedin.com/in/kgallaccio/
 ---
 
