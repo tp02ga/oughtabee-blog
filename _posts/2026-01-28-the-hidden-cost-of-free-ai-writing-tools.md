@@ -2,6 +2,7 @@
 title: "The Hidden Cost of 'Free' AI Writing Tools"
 date: 2026-01-28
 author: Trevor Page
+categories: ["AI Tools"]
 description: "ChatGPT and free AI tools seem like a no-brainer — until you add up the editing time. Here's the real math on whether free AI writing tools are worth it."
 image: /assets/images/free-ai-tools-cost.jpg
 permalink: /free-ai-writing-tools/

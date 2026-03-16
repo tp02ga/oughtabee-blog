@@ -5,13 +5,21 @@ layout: default
 <article class="post">
   <header class="post-header">
     <h1>{{ page.title }}</h1>
+    {% assign author = site.data.authors[page.author] %}
     <div class="author-byline">
-      <img class="author-photo" src="{{ '/trevor.jpeg' | relative_url }}" alt="Trevor" width="40" height="40">
+      <img class="author-photo" src="{{ author.photo | relative_url }}" alt="{{ author.short_name }}" width="40" height="40">
       <div>
-        <p class="author-name">Trevor</p>
-        <!-- link to Trevor's page can go here later -->
+        <a href="{{ author.linkedin }}" class="author-name" target="_blank" rel="noopener">{{ author.short_name }}</a>
+        <p class="author-title">{{ author.title }}</p>
       </div>
     </div>
+    {% if page.categories.size > 0 %}
+    <div class="post-categories">
+      {% for cat in page.categories %}
+        <a href="/categories/{{ cat | slugify }}/" class="category-badge">{{ cat }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if page.image %}
     <img class="post-hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
     {% endif %}

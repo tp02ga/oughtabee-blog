@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Business Growth"
+permalink: /categories/business-growth/
+---
+
+<div class="container">
+  <h1 style="font-family: 'Lora', Georgia, 'Times New Roman', serif; font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem;">Business Growth</h1>
+  <p style="color: #6b7280; margin-bottom: 2rem;">Scaling your coaching business through systems, automation, and strategic leverage.</p>
+
+  <ul class="post-list">
+    {% for post in site.categories["Business Growth"] %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

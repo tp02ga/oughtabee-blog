@@ -2,6 +2,7 @@
 title: "How to Build a Simple Content Calendar That You'll Actually Stick To"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Content Strategy"]
 description: "Most content calendars fail because they're overcomplicated. Here's a dead-simple 5-step system — takes 10 minutes a week to maintain."
 image: /assets/images/content-calendar.jpg
 permalink: /simple-social-media-content-calendar/

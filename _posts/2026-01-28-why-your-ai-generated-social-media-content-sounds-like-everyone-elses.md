@@ -2,6 +2,7 @@
 title: "Why Your AI-Generated Social Media Content Sounds Like Everyone Else's (And How to Fix It)"
 date: 2026-01-28
 author: Trevor Page
+categories: ["AI Tools"]
 description: "Everyone's using the same AI tools with the same default prompts, and it shows. Here's the context-first approach that makes your AI content stand out."
 image: /assets/images/ai-content-sameness.jpg
 permalink: /make-ai-content-sound-human/

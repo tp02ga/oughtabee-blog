@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Content Strategy"
+permalink: /categories/content-strategy/
+---
+
+<div class="container">
+  <h1 style="font-family: 'Lora', Georgia, 'Times New Roman', serif; font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem;">Content Strategy</h1>
+  <p style="color: #6b7280; margin-bottom: 2rem;">Articles on creating, organizing, and repurposing content to grow your coaching business.</p>
+
+  <ul class="post-list">
+    {% for post in site.categories["Content Strategy"] %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

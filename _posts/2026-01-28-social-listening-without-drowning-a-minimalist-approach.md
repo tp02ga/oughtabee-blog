@@ -2,6 +2,7 @@
 title: "Social Listening Without Drowning: A Minimalist Approach"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Social Media"]
 description: "You don't need 50 keyword alerts. You need 5. Here's the minimalist social listening setup that takes 15 minutes a week and actually leads to decisions."
 image: /assets/images/social-listening-minimalist.jpg
 permalink: /social-listening-small-business/

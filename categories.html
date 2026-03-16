@@ -1,0 +1,26 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="container">
+  <h1 style="font-family: 'Lora', Georgia, 'Times New Roman', serif; font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem;">Browse by Category</h1>
+
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    {% assign cat_name = category[0] %}
+    {% assign cat_posts = category[1] %}
+    <section class="category-section" id="{{ cat_name | slugify }}">
+      <h2>{{ cat_name }} <span style="font-weight: 400; font-size: 0.9rem; color: #6b7280;">({{ cat_posts.size }})</span></h2>
+      <ul class="post-list">
+        {% for post in cat_posts %}
+        <li>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

@@ -2,6 +2,7 @@
 title: "Your Content Library Isn't a Marketing Asset. It's a Revenue Engine You Haven't Turned On."
 date: 2026-02-04
 author: Trevor Page
+categories: ["Content Strategy"]
 description: "You've created thousands of hours of content — courses, calls, frameworks — and most of it is collecting dust. Here's how to activate it as a marketing and revenue asset."
 image: /assets/images/content-library-revenue-engine.jpg
 permalink: /content-repurposing-for-coaches/

@@ -2,6 +2,7 @@
 title: "Why Your Social Media Strategy Feels Like a Hamster Wheel (And How to Actually Get Off)"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Social Media"]
 description: "Posting every day and still getting nowhere? The problem isn't your effort — it's that most social media advice pushes you toward MORE when you need better."
 image: /assets/images/social-media-hamster-wheel.jpg
 permalink: /social-media-strategy-not-working/

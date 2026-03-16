@@ -2,6 +2,7 @@
 title: "Platform Hopping is Killing Your Marketing (Pick 2 and Commit)"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Social Media"]
 description: "Spreading yourself across 5 platforms means doing a mediocre job on all of them. Here's how to pick the right 2 — and what changes when you go deep."
 image: /assets/images/platform-focus.jpg
 permalink: /how-many-social-media-platforms/

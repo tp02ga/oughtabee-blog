@@ -2,6 +2,7 @@
 title: "The Only 3 Social Media Metrics That Actually Matter for Small Businesses"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Social Media"]
 description: "Stop obsessing over follower count. The metrics that actually predict business results are engagement rate, saves/shares, and CTR — here's how to track them."
 image: /assets/images/social-media-metrics.jpg
 permalink: /social-media-metrics-that-matter/

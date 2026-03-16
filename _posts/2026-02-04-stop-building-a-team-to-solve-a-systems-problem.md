@@ -2,6 +2,7 @@
 title: "Stop Building a Team to Solve a Systems Problem"
 date: 2026-02-04
 author: Trevor Page
+categories: ["Business Growth"]
 description: "Hiring a VA or associate coach won't fix an overwhelm problem if your business lacks systems. Here's how to eliminate and automate first — then hire strategically."
 image: /assets/images/team-vs-systems.jpg
 permalink: /automate-before-hiring/

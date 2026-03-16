@@ -2,6 +2,7 @@
 title: "5 Signs Your Automated DMs Are Hurting Your Brand"
 date: 2026-01-28
 author: Trevor Page
+categories: ["Social Media"]
 description: "A near-zero response rate, unfollows right after DMs, people screenshotting your messages — here's how to tell if your DM automation is backfiring."
 image: /assets/images/automated-dms-hurting-brand.jpg
 permalink: /automated-dms-hurting-your-brand/
