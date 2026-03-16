@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="container">
+  <header class="post-header">
+    <div class="author-byline">
+      <img class="author-photo" src="{{ page.photo | relative_url }}" alt="{{ page.name }}" width="40" height="40">
+      <div>
+        <a href="{{ page.linkedin }}" class="author-name" target="_blank" rel="noopener">{{ page.name }}</a>
+        <p class="author-title">{{ page.title }}</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <h2>Posts</h2>
+  <ul class="post-list">
+    {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+    {% for post in filtered_posts %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

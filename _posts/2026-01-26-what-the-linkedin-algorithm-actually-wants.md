@@ -1,7 +1,7 @@
 ---
 title: "What the LinkedIn Algorithm Actually Wants in 2026"
 date: 2026-01-26
-author: Trevor Page
+author: trevor
 categories: ["Social Media"]
 description: "LinkedIn organic reach is down 50% in 2026. Here's exactly how the algorithm works now - Depth Score, engagement quality, and what content formats win."
 image: /assets/images/linkedin-algorithm-2026.jpg

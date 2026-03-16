@@ -409,11 +409,11 @@ title: OughtaBee Blog
     <div class="featured-post-content">
       <span class="featured-label">Featured</span>
       <h2><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></h2>
-      {% assign feat_author = site.data.authors[first_post.author] %}
+      {% assign feat_author = site.authors | where: 'short_name', first_post.author | first %}
       <div class="author-byline">
-        <img class="author-photo" src="{{ feat_author.photo | relative_url }}" alt="{{ feat_author.short_name }}" width="28" height="28">
+        <img class="author-photo" src="{{ feat_author.photo | relative_url }}" alt="{{ feat_author.name }}" width="28" height="28">
         <div>
-          <p class="author-name">{{ feat_author.short_name }}{% if first_post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ first_post.categories[0] | slugify }}/" class="category-label">{{ first_post.categories[0] }}</a>{% endif %}</p>
+          <p class="author-name">{{ feat_author.name }}{% if first_post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ first_post.categories[0] | slugify }}/" class="category-label">{{ first_post.categories[0] }}</a>{% endif %}</p>
         </div>
       </div>
       <p class="excerpt">{{ first_post.excerpt | strip_html | truncatewords: 50 }}</p>
@@ -429,11 +429,11 @@ title: OughtaBee Blog
     {% for post in site.posts offset:1 %}
     <li>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      {% assign post_author = site.data.authors[post.author] %}
+      {% assign post_author = site.authors | where: 'short_name', post.author | first %}
       <div class="author-byline">
-        <img class="author-photo" src="{{ post_author.photo | relative_url }}" alt="{{ post_author.short_name }}" width="24" height="24">
+        <img class="author-photo" src="{{ post_author.photo | relative_url }}" alt="{{ post_author.name }}" width="24" height="24">
         <div>
-          <p class="author-name">{{ post_author.short_name }}{% if post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ post.categories[0] | slugify }}/" class="category-label">{{ post.categories[0] }}</a>{% endif %}</p>
+          <p class="author-name">{{ post_author.name }}{% if post.categories.size > 0 %}<span class="category-sep"> · </span><a href="/categories/{{ post.categories[0] | slugify }}/" class="category-label">{{ post.categories[0] }}</a>{% endif %}</p>
         </div>
       </div>
       <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>

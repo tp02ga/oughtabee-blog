@@ -1,7 +1,7 @@
 ---
 title: "How to Audit Your Content Library in 90 Minutes (And Find the Revenue Hiding Inside It)"
 date: 2026-02-04
-author: Trevor Page
+author: trevor
 categories: ["Content Strategy"]
 description: "You're sitting on thousands of hours of intellectual property — and most of it is untouched. This 90-minute audit shows you exactly where the value is."
 image: /assets/images/content-library-audit.jpg

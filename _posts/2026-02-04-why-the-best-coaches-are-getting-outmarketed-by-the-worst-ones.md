@@ -1,7 +1,7 @@
 ---
 title: "Why the Best Coaches Are Getting Outmarketed by the Worst Ones"
 date: 2026-02-04
-author: Trevor Page
+author: trevor
 categories: ["Social Media"]
 description: "Less experienced coaches are out-posting you and winning clients that should be yours. Here's the visibility system that lets expert coaches compete without burning out."
 image: /assets/images/outmarketed-coaches.jpg

@@ -1,7 +1,7 @@
 ---
 title: "The $500K Ceiling: Why Adding More Hours Won't Get You to $5M"
 date: 2026-02-04
-author: Trevor Page
+author: trevor
 categories: ["Business Growth"]
 description: "You've maxed out what's possible by trading time for money. Here's how experienced coaches break through the revenue ceiling using leverage — not more hours."
 image: /assets/images/500k-ceiling.jpg

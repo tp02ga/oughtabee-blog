@@ -13,6 +13,11 @@ author:
 markdown: kramdown
 permalink: /:title/
 
+# Collections
+collections:
+  authors:
+    output: true
+
 # SEO Plugin
 plugins:
   - jekyll-seo-tag
@@ -28,14 +33,19 @@ social:
     - https://www.linkedin.com/company/oughtabee
     - https://twitter.com/your_handle
 
-# Default front matter for posts
+# Default front matter
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      author: "Trevor Page"
+      author: "trevor"
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
 
 # Exclude from processing
 exclude:
